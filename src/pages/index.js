@@ -1,18 +1,18 @@
 import { useState } from "react";
 
-import Navbar from "../components/Navbar";
-import Hero from "../components/Hero";
-import About from "../components/About";
-import Services from "../components/Services";
-import HowItWorks from "../components/HowItWorks";
-import Doctors from "../components/Doctors";
-import Marquee from "../components/Marquee";
-import Testimonials from "../components/Testimonials";
-import FAQ from "../components/FAQ";
-import Footer from "../components/Footer";
-import InfoModal from "../components/InfoModal";
-import AppointmentModal from "../components/AppointmentModal";
-import SupportCard from "../components/SupportCard";
+import Navbar from "../Components/Navbar";
+import Hero from "../Components/Hero";
+import About from "../Components/About";
+import Services from "../Components/Services";
+import HowItWorks from "../Components/HowItWorks";
+import Doctors from "../Components/Doctors";
+import Marquee from "../Components/Marquee";
+import Testimonials from "../Components/Testimonials";
+import FAQ from "../Components/FAQ";
+import Footer from "../Components/Footer";
+import InfoModal from "../Components/InfoModal";
+import AppointmentModal from "../Components/AppointmentModal";
+import SupportCard from "../Components/SupportCard";
 
 export default function Home() {
   const [activeInfo, setActiveInfo] = useState(null);
