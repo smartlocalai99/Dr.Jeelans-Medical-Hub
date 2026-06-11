@@ -1398,9 +1398,9 @@ body {
   display: block;
   width: 100%;
   text-align: center;
-  font-size: clamp(50px, 10vw, 150px);
+  font-size: clamp(28px, 6vw, 90px);
   line-height: 0.82;
-  letter-spacing: -6px;
+  letter-spacing: -3px;
   font-weight: 900;
   color: rgba(255, 255, 255, 0.05);
   white-space: nowrap;
@@ -2139,8 +2139,8 @@ button:hover {
   }
 
   .footer-watermark {
-    font-size: 42px;
-    letter-spacing: -3px;
+    font-size: clamp(18px, 4.5vw, 42px);
+    letter-spacing: -2px;
   }
 
   .footer-bottom div {
