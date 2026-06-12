@@ -60,7 +60,6 @@ export default function About({ openInfo }) {
         <motion.div
           initial={{ opacity: 0, x: -60, skewX: -4 }}
           whileInView={{ opacity: 1, x: 0, skewX: 0 }}
-          transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
           viewport={{ once: true }}
         >
           <p className="about-pro-label">About Our Clinic</p>
@@ -78,11 +77,6 @@ export default function About({ openInfo }) {
               key={stat.label}
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{
-                delay: index * 0.18,
-                duration: 0.65,
-                ease: [0.22, 1, 0.36, 1],
-              }}
               viewport={{ once: true }}
             >
               <h3>{stat.number}</h3>
@@ -97,7 +91,6 @@ export default function About({ openInfo }) {
           className="about-pro-image"
           initial={{ opacity: 0, scale: 0.88, y: 30 }}
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
-          transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
           viewport={{ once: true }}
         >
           <img src="/about-clinic.jpg" alt="Dr. Jeelan consulting patient" />
@@ -117,13 +110,6 @@ export default function About({ openInfo }) {
               key={card.title}
               initial={{ opacity: 0, y: 55, rotate: index % 2 === 0 ? -2 : 2 }}
               whileInView={{ opacity: 1, y: 0, rotate: 0 }}
-              transition={{
-                delay: index * 0.14,
-                duration: 0.7,
-                type: "spring",
-                stiffness: 120,
-                damping: 18,
-              }}
               viewport={{ once: true }}
             >
               <h3>{card.title}</h3>

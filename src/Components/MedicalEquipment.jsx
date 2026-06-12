@@ -31,7 +31,6 @@ export default function MedicalEquipment() {
           className="equipment-top"
           initial={{ opacity: 0, y: 45 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
           viewport={{ once: true }}
         >
           <div>
@@ -52,11 +51,6 @@ export default function MedicalEquipment() {
               key={item.name}
               initial={{ opacity: 0, y: 70, scale: 0.96 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              transition={{
-                duration: 0.75,
-                delay: index * 0.12,
-                ease: [0.22, 1, 0.36, 1],
-              }}
               viewport={{ once: true }}
             >
               <div className="equipment-image">

@@ -2,7 +2,8 @@ import { motion } from "framer-motion";
 import { Headphones, MessageCircle, Mail, MapPin } from "lucide-react";
 
 export default function SupportCard() {
-  const mapUrl = "https://www.google.com/maps/search/?api=1&query=Dr%20Jeelan%20Medical%20Hub";
+  const mapUrl =
+    "https://maps.app.goo.gl/aFmnUXYJWBrDjJHPA?g_st=ac";
 
   return (
     <section className="support-section" id="contact">
@@ -10,52 +11,58 @@ export default function SupportCard() {
         className="support-card"
         initial={{ opacity: 0, y: 60, scale: 0.96 }}
         whileInView={{ opacity: 1, y: 0, scale: 1 }}
-        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         viewport={{ once: true }}
       >
         <h3>Contact Us</h3>
 
-        <div className="support-info">
-          <Headphones size={22} />
-          <div>
-            <strong>Phone:</strong>
-            <p>+91 94944 03103</p>
+        {/* Phone */}
+        <a href="tel:+919494403103" className="support-link">
+          <div className="support-info">
+            <Headphones size={22} />
+            <div>
+              <strong>Phone:</strong>
+              <p>+91 94944 03103</p>
+            </div>
           </div>
-        </div>
+        </a>
 
-        <div className="support-info">
-          <MessageCircle size={22} />
-          <div>
-            <strong>SMS / WhatsApp</strong>
-            <p>+91 94944 03103</p>
+        {/* WhatsApp */}
+        <a
+          href="https://wa.me/919494403103"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="support-link"
+        >
+          <div className="support-info">
+            <MessageCircle size={22} />
+            <div>
+              <strong>SMS / WhatsApp</strong>
+              <p>+91 94944 03103</p>
+            </div>
           </div>
-        </div>
+        </a>
 
-        <div className="support-info">
-          <Mail size={22} />
-          <div>
-            <strong>Email:</strong>
-            <p>support@drjeelanshub.com</p>
+        {/* Email */}
+        <a
+          href="mailto:drjeelansmedicalhub@gmail.com"
+          className="support-link"
+        >
+          <div className="support-info">
+            <Mail size={22} />
+            <div>
+              <strong>Email:</strong>
+              <p>drjeelansmedicalhub@gmail.com</p>
+            </div>
           </div>
-        </div>
+        </a>
 
         <div className="support-line"></div>
-
-        <h4>Connect with us</h4>
-
-        <div className="support-socials">
-          <a>f</a>
-          <a>◎</a>
-          <a>𝕏</a>
-          <a>▶</a>
-        </div>
       </motion.div>
 
       <motion.div
         className="location-card"
         initial={{ opacity: 0, y: 60, scale: 0.96 }}
         whileInView={{ opacity: 1, y: 0, scale: 1 }}
-        transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
         viewport={{ once: true }}
       >
         <div className="location-heading">

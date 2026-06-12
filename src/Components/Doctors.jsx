@@ -37,7 +37,6 @@ export default function Doctors({ openAppointment }) {
       <motion.div
         initial={{ opacity: 0, y: 40, scale: 0.94 }}
         whileInView={{ opacity: 1, y: 0, scale: 1 }}
-        transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         viewport={{ once: true }}
       >
         <div className="section-pill">Doctors</div>
@@ -52,13 +51,6 @@ export default function Doctors({ openAppointment }) {
             key={doctor.name}
             initial={{ opacity: 0, y: -60, scale: 0.9 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{
-              delay: i * 0.18,
-              duration: 0.9,
-              type: "spring",
-              stiffness: 100,
-              damping: 14,
-            }}
             viewport={{ once: true }}
           >
             <div className="doctor-flip">

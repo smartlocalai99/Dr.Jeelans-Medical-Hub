@@ -43,7 +43,6 @@ export default function HowItWorks({ openAppointment }) {
         <motion.div
           initial={{ opacity: 0, scale: 0.82, y: 20 }}
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
-          transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
           viewport={{ once: true }}
         >
           <span className="how-label">HOW IT WORKS</span>
@@ -59,7 +58,6 @@ export default function HowItWorks({ openAppointment }) {
         <motion.p
           initial={{ opacity: 0, x: 55 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
           viewport={{ once: true }}
         >
           A simple, guided process designed to make your care smooth,
@@ -85,11 +83,6 @@ export default function HowItWorks({ openAppointment }) {
                 x: 0,
                 scale: 1,
               }}
-              transition={{
-                duration: 0.85,
-                delay: index * 0.12,
-                ease: [0.22, 1, 0.36, 1],
-              }}
               viewport={{ once: true }}
             >
               <img src={step.img} alt={step.title} />
@@ -112,7 +105,6 @@ export default function HowItWorks({ openAppointment }) {
         className="how-premium-bottom"
         initial={{ opacity: 0, y: 55, filter: "blur(6px)" }}
         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-        transition={{ duration: 0.85, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
         viewport={{ once: true }}
       >
         <div>

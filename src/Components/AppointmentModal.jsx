@@ -44,7 +44,6 @@ export default function AppointmentModal({ isOpen, onClose }) {
             initial={{ opacity: 0, y: 80, scale: 0.92 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 80, scale: 0.92 }}
-            transition={{ duration: 0.45, ease: "easeOut" }}
           >
             <button className="appointment-close" onClick={onClose}>
               ×

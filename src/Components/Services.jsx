@@ -74,7 +74,6 @@ export default function Services({ openAppointment }) {
         <motion.div
           initial={{ opacity: 0, y: 45 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           viewport={{ once: true }}
         >
           <div className="section-pill">Services</div>
@@ -88,7 +87,6 @@ export default function Services({ openAppointment }) {
         <motion.p
           initial={{ opacity: 0, y: 35 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.15 }}
           viewport={{ once: true }}
         >
           We provide a wide range of healthcare services covering your recovery,
@@ -106,11 +104,6 @@ export default function Services({ openAppointment }) {
               onClick={() => setActive(active === index ? null : index)}
               initial={{ opacity: 0, x: 80, scale: 0.96 }}
               whileInView={{ opacity: 1, x: 0, scale: 1 }}
-              transition={{
-                duration: 0.75,
-                delay: index * 0.08,
-                ease: [0.22, 1, 0.36, 1],
-              }}
               viewport={{ once: true }}
             >
               <span className="service-tag">{service.title}</span>
@@ -136,7 +129,6 @@ export default function Services({ openAppointment }) {
               initial={{ opacity: 0, x: 60, scale: 0.95 }}
               animate={{ opacity: 1, x: 0, scale: 1 }}
               exit={{ opacity: 0, x: 60, scale: 0.95 }}
-              transition={{ duration: 0.42, ease: [0.22, 1, 0.36, 1] }}
             >
               <button
                 type="button"

@@ -31,7 +31,6 @@ export default function FAQ() {
         className="faq-left"
         initial={{ opacity: 0, y: -35, scale: 0.97 }}
         whileInView={{ opacity: 1, y: 0, scale: 1 }}
-        transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         viewport={{ once: true }}
       >
         <div className="section-pill">FAQs</div>
@@ -58,11 +57,6 @@ export default function FAQ() {
             onClick={() => setActive(active === index ? null : index)}
             initial={{ opacity: 0, x: 60, clipPath: "inset(0 0 0 100%)" }}
             whileInView={{ opacity: 1, x: 0, clipPath: "inset(0 0 0 0%)" }}
-            transition={{
-              delay: index * 0.12,
-              duration: 0.65,
-              ease: [0.22, 1, 0.36, 1],
-            }}
             viewport={{ once: true }}
           >
             <div className="faq-question">
@@ -77,7 +71,6 @@ export default function FAQ() {
                   initial={{ opacity: 0, height: 0, y: -8 }}
                   animate={{ opacity: 1, height: "auto", y: 0 }}
                   exit={{ opacity: 0, height: 0, y: -8 }}
-                  transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
                 >
                   {faq.answer}
                 </motion.div>
