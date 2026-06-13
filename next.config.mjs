@@ -2,7 +2,7 @@
 const nextConfig = {
   /* config options here */
   reactStrictMode: true,
-  devIndicators: false ,
+  devIndicators: false,
 };
 
 export default nextConfig;
