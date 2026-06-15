@@ -7,7 +7,7 @@ export default function SupportCard() {
 
   return (
     <section className="support-section" id="contact">
-      <motion.div
+      <div
         className="support-card"
         initial={{ opacity: 0, y: 60, scale: 0.96 }}
         whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -54,9 +54,9 @@ export default function SupportCard() {
         </a>
 
         <div className="support-line"></div>
-      </motion.div>
+      </div>
 
-      <motion.div
+      <div
         className="location-card"
         initial={{ opacity: 0, y: 60, scale: 0.96 }}
         whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -92,7 +92,7 @@ export default function SupportCard() {
             <p>Open in Google Maps</p>
           </div>
         </a>
-      </motion.div>
+      </div>
     </section>
   );
 }

@@ -27,14 +27,13 @@ export default function MedicalEquipment() {
   return (
     <section className="equipment-section" id="equipment">
       <div className="equipment-container">
-        <motion.div
+        <div
           className="equipment-top"
           initial={{ opacity: 0, y: 45 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
           <div>
-            <div className="section-pill">Equipment</div>
             <h2>Medical Equipment</h2>
           </div>
 
@@ -42,26 +41,28 @@ export default function MedicalEquipment() {
             Premium diagnostic and care equipment supporting trusted healthcare
             services at Dr. Jeelan&apos;s Medical Hub.
           </p>
-        </motion.div>
+        </div>
 
         <div className="equipment-grid">
           {equipments.map((item, index) => (
-            <motion.div
+            <div
               className="equipment-card"
               key={item.name}
               initial={{ opacity: 0, y: 70, scale: 0.96 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true }}
             >
-              <div className="equipment-image">
-                <img src={item.img} alt={item.name} />
-              </div>
+              <img
+                src={item.img}
+                alt={item.name}
+                className="equipment-card-img"
+              />
 
               <div className="equipment-content">
                 <h3>{item.name}</h3>
                 <p>{item.desc}</p>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

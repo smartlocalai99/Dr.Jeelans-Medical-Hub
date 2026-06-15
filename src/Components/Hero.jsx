@@ -1,12 +1,19 @@
 import { motion } from "framer-motion";
 
-export default function Hero({ openInfo, openAppointment }) {
+export default function Hero({ openAppointment }) {
   const stats = [
     "500+ Happy Patients",
     "Expert Healthcare Team",
     "Home Care Support",
     "Personalized Treatment Plans",
   ];
+
+  const scrollToServices = () => {
+    document.getElementById("services")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
 
   return (
     <section className="hero" id="home">
@@ -58,22 +65,7 @@ export default function Hero({ openInfo, openAppointment }) {
             Book Appointment
           </button>
 
-          <button
-            className="secondary-btn"
-            onClick={() =>
-              openInfo({
-                tag: "Services",
-                title: "Explore Services",
-                description:
-                  "Discover our physiotherapy, medical consultation, home care, and recovery support services.",
-                items: [
-                  "Online consultation",
-                  "Home healthcare support",
-                  "Recovery and physiotherapy guidance",
-                ],
-              })
-            }
-          >
+          <button className="secondary-btn" onClick={scrollToServices}>
             Explore Services
           </button>
         </motion.div>
