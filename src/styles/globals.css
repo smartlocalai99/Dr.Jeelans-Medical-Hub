@@ -2355,24 +2355,6 @@ button:hover {
   transform: translateY(-4px);
 }
 
-/* REMOVE CARD HOVER MOVEMENT */
-
-.modern-service-card,
-.equipment-card,
-.about-pro-card,
-.testimonial-card,
-.doctor-card {
-  transition: none !important;
-}
-
-.modern-service-card:hover,
-.equipment-card:hover,
-.about-pro-card:hover,
-.testimonial-card:hover,
-.doctor-card:hover {
-  transform: none !important;
-}
-
 /* RESPONSIVE */
 
 @media (max-width: 900px) {
