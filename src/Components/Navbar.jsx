@@ -25,7 +25,7 @@ export default function Navbar({ openAppointment }) {
         <a href="#contact">Contact</a>
       </div>
 
-      <button className="book-btn" onClick={openAppointment}>
+      <button className="book-btn" onClick={() => window.location.href = "tel:+919494403103"}>
         Book Appointment
       </button>
     </motion.nav>

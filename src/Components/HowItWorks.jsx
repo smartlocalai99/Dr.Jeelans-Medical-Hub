@@ -1,30 +1,34 @@
 export default function HowItWorks() {
-const steps = [
-  {
-    num: "01",
-    title: "Choose Service",
-    desc: "Select the right healthcare service and share your health concerns with our team.",
-    img: "/how-it-works/choose-service.png",
-  },
-  {
-    num: "02",
-    title: "Get Consultation",
-    desc: "Consult with trusted doctors and receive clear guidance for your condition.",
-    img: "/how-it-works/get-consultation.png",
-  },
-  {
-    num: "03",
-    title: "Start Treatment",
-    desc: "Begin a personalized treatment plan designed for recovery, mobility, and comfort.",
-    img: "/how-it-works/start-treatment.png",
-  },
-  {
-    num: "04",
-    title: "Recover Better",
-    desc: "Get continuous follow-up support and recovery guidance for long-term wellness.",
-    img: "/how-it-works/recover-better.png",
-  },
-];
+  const steps = [
+    {
+      num: "01",
+      title: "Choose Service",
+      desc: "Select the right healthcare service and share your health concerns with our team.",
+      icon: "☝",
+      img: "/how-it-works/choose-service.png",
+    },
+    {
+      num: "02",
+      title: "Get Consultation",
+      desc: "Consult with trusted doctors and receive clear guidance for your condition.",
+      icon: "🩺",
+      img: "/how-it-works/get-consultation.png",
+    },
+    {
+      num: "03",
+      title: "Start Treatment",
+      desc: "Begin a personalized treatment plan designed for recovery, mobility, and comfort.",
+      icon: "🤲",
+      img: "/how-it-works/start-treatment.png",
+    },
+    {
+      num: "04",
+      title: "Recover Better",
+      desc: "Get continuous follow-up support and recovery guidance for long-term wellness.",
+      icon: "🛡",
+      img: "/how-it-works/recover-better.png",
+    },
+  ];
 
   return (
     <section className="how-premium" id="how">
@@ -37,11 +41,6 @@ const steps = [
             in Four Steps
           </h2>
         </div>
-
-        <p>
-          A simple, guided process designed to make your care smooth,
-          transparent, and stress-free.
-        </p>
       </div>
 
       <div className="how-premium-grid">
@@ -49,9 +48,13 @@ const steps = [
           <div className="how-premium-card" key={step.num}>
             <img src={step.img} alt={step.title} />
 
+            <div className="how-num">{step.num}
+
+            </div>
+
             <div className="how-card-content">
-              <span className="how-big-number">{step.num}</span>
               <h3>{step.title}</h3>
+              <span></span>
               <p>{step.desc}</p>
             </div>
           </div>
@@ -60,10 +63,8 @@ const steps = [
 
       <div className="how-premium-bottom">
         <div>
-          <h4>READY TO GET STARTED?</h4>
-          <p>
-            Call us now and our team will guide you through the next step.
-          </p>
+          <h4>Ready to get started?</h4>
+          <p>Call us now and our team will guide you through the next step.</p>
         </div>
 
         <a href="tel:+919494403103">Book Appointment</a>
