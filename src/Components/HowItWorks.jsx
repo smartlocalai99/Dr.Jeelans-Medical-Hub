@@ -28,7 +28,7 @@ const steps = [
 
   return (
     <section className="how-premium" id="how">
-      <div className="how-premium-top">
+      <div className="how-premium-top mt-9">
         <div>
           <span className="how-label">HOW IT WORKS</span>
           <h2>
@@ -38,7 +38,7 @@ const steps = [
           </h2>
         </div>
 
-        <p>
+        <p className="text-white">
           A simple, guided process designed to make your care smooth,
           transparent, and stress-free.
         </p>
