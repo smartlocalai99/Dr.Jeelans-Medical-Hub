@@ -79,9 +79,9 @@ export default function Doctors({ openAppointment }) {
 
                 <p>{doctor.desc}</p>
 
-                <button className="doctor-book-btn" onClick={openAppointment}>
+                <a href="tel:+919494403103" className="doctor-book-btn">
                   Book Appointment
-                </button>
+                </a>
               </div>
             </div>
           </motion.div>

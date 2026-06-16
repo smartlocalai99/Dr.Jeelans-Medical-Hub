@@ -67,7 +67,7 @@ body {
 
 .navbar-logo {
   width: 185px;
-  height: 68px;
+  height: 93px;
   object-fit: contain;
   display: block;
 }
@@ -1456,29 +1456,30 @@ body {
 /* AVATAR */
 
 .review-avatar {
-  width: 54px;
+  width: 60px;
 
-  height: 54px;
+  height: 60px;
 
   border-radius: 50%;
 
-  background: linear-gradient(
-    135deg,
-    var(--navy),
-    var(--gold)
-  );
+  overflow: hidden;
 
-  color: white;
+  flex-shrink: 0;
 
-  font-size: 18px;
+  border: 3px solid rgba(244,197,66,0.7);
 
-  font-weight: 900;
+  box-shadow:
+    0 6px 18px rgba(0,0,0,0.08);
+}
 
-  display: flex;
+.review-avatar img {
+  width: 100%;
 
-  align-items: center;
+  height: 100%;
 
-  justify-content: center;
+  object-fit: cover;
+
+  display: block;
 }
 
 /* NAME BAR */
@@ -1487,32 +1488,26 @@ body {
   flex: 1;
 }
 
-.review-name-skeleton {
-  width: 130px;
-
-  height: 12px;
-
-  background: #ececec;
-
-  border-radius: 999px;
-
-  margin-bottom: 8px;
+.review-name-line strong {
+  display: block;
+  color: var(--navy);
+  font-size: 16px;
+  font-weight: 800;
+  margin-bottom: 5px;
 }
 
 .review-name-line small {
-  color: #9ca3af;
-
+  color: #8a96a6;
   font-size: 12px;
-
   font-weight: 700;
 }
 
 /* GOOGLE ICON */
 
 .google-mini {
-  width: 26px;
+  width: 24px;
 
-  height: 26px;
+  height: 24px;
 
   flex-shrink: 0;
 }
@@ -1751,10 +1746,27 @@ body {
 }
 
 .footer-brand img {
-  width: 180px;
-  height: 80px;
+  width: 230px;
+
+  height: 110px;
+
   object-fit: contain;
-  filter: brightness(1.1) contrast(1.2);
+
+  filter:
+    brightness(1.35)
+    contrast(1.35)
+    saturate(1.2);
+
+  opacity: 1;
+
+  transform: scale(1.05);
+
+  filter:
+    brightness(1.35)
+    contrast(1.35)
+    saturate(1.2)
+    drop-shadow(0 0 4px rgba(255,255,255,0.12))
+    drop-shadow(0 6px 14px rgba(0,0,0,0.18));
 }
 
 .footer-social {
@@ -1838,8 +1850,8 @@ body {
   padding: 12px 14px;
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 8px;
+  gap: 14px;
+  margin-bottom: 18px;
 }
 
 .telegram-card:hover {
@@ -1931,6 +1943,52 @@ body {
 .footer-bottom a:hover {
   color: #ffe985;
 }
+
+/* FOOTER FINAL POLISH */
+
+.footer {
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.footer-line {
+  display: none;
+}
+
+.footer-contact h4,
+.footer-links h4 {
+  font-size: 24px;
+}
+
+.footer-links a {
+  font-size: 18px;
+}
+
+.telegram-card strong {
+  font-size: 19px;
+}
+
+.telegram-card p {
+  font-size: 16px;
+}
+
+.footer-social {
+  font-size: 17px;
+}
+
+.footer-watermark {
+  font-size: clamp(42px, 7vw, 120px);
+  margin-top: 28px;
+  margin-bottom: 8px;
+  line-height: 0.9;
+}
+
+.footer-bottom {
+  border-top: none;
+  padding-top: 8px;
+  font-size: 16px;
+}
+
 .info-modal-overlay {
   position: fixed;
   inset: 0;
@@ -2192,6 +2250,8 @@ button:hover {
 
 .support-card {
   background: linear-gradient(135deg, var(--navy), var(--blue));
+  height: fit-content;
+  min-height: auto;
   color: var(--white);
   border-radius: 28px;
   padding: 34px;
@@ -2270,16 +2330,24 @@ button:hover {
   margin-top: 24px;
 }
 
-.support-socials a {
-  width: 48px;
+.support-socials img {
+  width: 24px;
 
-  height: 48px;
+  height: 24px;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+.support-socials a {
+  width: 54px;
+
+  height: 54px;
 
   border-radius: 50%;
 
-  background: var(--gold);
-
-  color: var(--navy);
+  background: #ffffff;
 
   display: flex;
 
@@ -2288,16 +2356,59 @@ button:hover {
   justify-content: center;
 
   text-decoration: none;
+
+  border: 1px solid rgba(0,0,0,0.06);
+
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+}
+
+/* Instagram */
+
+.support-socials a:nth-child(1) {
+  color: #E1306C;
+}
+
+/* Facebook */
+
+.support-socials a:nth-child(2) {
+  color: #1877F2;
+}
+
+/* YouTube */
+
+.support-socials a:nth-child(3) {
+  color: #FF0000;
 }
 
 .support-socials svg {
-  width: 22px;
+  width: 24px;
 
-  height: 22px;
+  height: 24px;
 }
 
 .support-socials a:hover {
   transform: none !important;
+}
+
+.support-link {
+  text-decoration: none;
+
+  color: inherit;
+
+  display: block;
+}
+
+.support-link:hover {
+  text-decoration: none;
+}
+
+.support-link strong,
+.support-link p {
+  text-decoration: none;
+}
+
+.support-link:visited {
+  color: inherit;
 }
 
 /* LOCATION */
@@ -2344,15 +2455,33 @@ button:hover {
   align-items: center;
   gap: 15px;
   text-decoration: none;
-  color: inherit;
+  color: white;
   padding: 18px;
   border-radius: 18px;
-  background: rgba(10, 77, 140, 0.08);
+  background: black;
   transition: all 0.3s ease;
 }
 
 .map-pin-card:hover {
   transform: translateY(-4px);
+}
+
+/* REMOVE CARD HOVER MOVEMENT */
+
+.modern-service-card,
+.equipment-card,
+.about-pro-card,
+.testimonial-card,
+.doctor-card {
+  transition: none !important;
+}
+
+.modern-service-card:hover,
+.equipment-card:hover,
+.about-pro-card:hover,
+.testimonial-card:hover,
+.doctor-card:hover {
+  transform: none !important;
 }
 
 /* RESPONSIVE */
@@ -2368,13 +2497,26 @@ button:hover {
     height: 75px;
   }
 
-  .navbar-logo img,
-  .logo img {
-   height: 95px;
-   width: auto;
-   object-fit: contain;
-   filter: drop-shadow(0 8px 20px rgba(10, 77, 140, 0.15));
- }
+  .navbar-logo img {
+  width: 95px;
+
+  height: 95px;
+
+  object-fit: contain;
+
+  opacity: 1;
+
+  transform: scale(1.08);
+
+  filter:
+    brightness(1.3)
+    contrast(1.3)
+    saturate(1.15)
+    drop-shadow(0 0 3px rgba(255,255,255,0.08))
+    drop-shadow(0 4px 10px rgba(0,0,0,0.12));
+
+  transition: none;
+}
 
   .nav-links {
     display: none;
